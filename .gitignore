@@ -1,0 +1,11 @@
+# passwords can be any filename and they *will* be committed by somebody, so
+# we'll use an allow-list here.
+
+# forbid all...
+**
+
+# ...except these:
+!.gitignore
+!genpasswords.py
+!README.md
+!passwords.ini.in
