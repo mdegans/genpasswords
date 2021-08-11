@@ -26,7 +26,16 @@ jobs:
           pytest
       - uses: codecov/codecov-action@v2
         with:
+          flags: ${{ matrix.python-version }}
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           name: codecov-umbrella
           fail_ci_if_error: true
+          # workaround for https://github.com/codecov/codecov-action/issues/85
+          # https://github.com/miri64/riotctrl/commit/67ec74078699258624dc3b0c90ad9172686d8aea
           verbose: true
+      - name: Upload coverage report
+        run: |
+          bash <(curl -s https://codecov.io/bash) -X search -f "./coverage.xml"
+        env:
+          GITHUB_ACTION: ""
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
