@@ -1,7 +1,5 @@
 # genpasswords.py
 
-[![Coverage Status](https://coveralls.io/repos/github/mdegans/genpasswords/badge.svg?branch=main)](https://coveralls.io/github/mdegans/genpasswords?branch=main)
-
 Is a simple script to generate a `key=value` style file using a template.
 
 An input file should have lines in the format:
