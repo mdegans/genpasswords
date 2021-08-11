@@ -9,3 +9,6 @@
 !genpasswords.py
 !README.md
 !passwords.ini.in
+!setup.cfg
+!test_genpasswords.py
+!.github/**

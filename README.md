@@ -1,5 +1,7 @@
 # genpasswords.py
 
+[![Coverage Status](https://coveralls.io/repos/github/mdegans/genpasswords/badge.svg?branch=main)](https://coveralls.io/github/mdegans/genpasswords?branch=main)
+
 Is a simple script to generate a `key=value` style file using a template.
 
 An input file should have lines in the format:
@@ -13,3 +15,9 @@ where...
 * `kind` is either `base64` or `hex`. base64 is a better choice for passwords
 
 Any blank lines or lines starting with `#` are ignored.
+
+## A note on word passwords
+
+Word passwords will be picked from `/usr/share/dict/words` by default, which may
+contain offensive words depending on the dictionary. Supply a `--bad-words` file
+to disallow certain words or a `--words` file to use an alternative dictionary.
