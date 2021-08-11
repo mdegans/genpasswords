@@ -13,3 +13,9 @@ where...
 * `kind` is either `base64` or `hex`. base64 is a better choice for passwords
 
 Any blank lines or lines starting with `#` are ignored.
+
+## A note on word passwords
+
+Word passwords will be picked from `/usr/share/dict/words` by default, which may
+contain offensive words depending on the dictionary. Supply a `--bad-words` file
+to disallow certain words or a `--words` file to use an alternative dictionary.
