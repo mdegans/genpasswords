@@ -1,5 +1,7 @@
 # genpasswords.py
 
+[![codecov](https://codecov.io/gh/mdegans/genpasswords/branch/main/graph/badge.svg?token=FQF8KPFRC9)](https://codecov.io/gh/mdegans/genpasswords)
+
 Is a simple script to generate a `key=value` style file using a template.
 
 An input file should have lines in the format:
